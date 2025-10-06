@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: sans-serif; width: 200px; }
+    label { display: block; margin: 8px 0; }
+    button { 
+      width: 100%; 
+      padding: 8px; 
+      margin-top: 10px; 
+      background-color: #4CAF50; 
+      color: white; 
+      border: none; 
+      border-radius: 4px; 
+      cursor: pointer; 
+    }
+    button:hover { background-color: #45a049; }
+  </style>
+</head>
+<body>
+  <label>
+    <input type="checkbox" id="pspToggle" />
+    Enable PSP
+  </label>
+  <label>
+    <input type="checkbox" id="devModeToggle" />
+    Activate Develop Mode
+  </label>
+  <button id="applyButton">Apply Changes</button>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "PSP Toggle Extension",
+  "version": "1.0",
+  "description": "Toggle PSP and Develop Mode for a specific site.",
+  "permissions": [
+    "cookies",
+    "scripting",
+    "declarativeNetRequestWithHostAccess",
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://www.marca.com/*",
+    "*://adtcdn.unidadeditorial.es/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.marca.com/*"],
+      "js": ["content.js"],
+      "css": ["overlay.css"]
+    }
+  ]
+}
