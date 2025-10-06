@@ -83,20 +83,24 @@ devToggle.addEventListener('change', async () => {
 function updateExtensionIcon(pspEnabled, devMode) {
   let color;
   if (devMode && pspEnabled) {
+    colorName = 'orange';
     color = '#FFA500'; // orange for dev mode
   } else if (pspEnabled) {
+    colorName = 'green';
     color = '#4CAF50'; // green for PSP enabled
   } else {
+    colorName = 'red';
     color = '#F44336'; // red for PSP disabled
   }
   
-  chrome.action.setIcon({
+  // TODO: create icons for statuses
+  /*chrome.action.setIcon({
     path: {
-      "16": `icons/${color}16.png`,
-      "32": `icons/${color}32.png`,
-      "48": `icons/${color}48.png`
+      "16": `icons/${colorName}16.png`,
+      "32": `icons/${colorName}32.png`,
+      "48": `icons/${colorName}48.png`
      }
-  });
+  });*/
 }
 
 // Apply changes and reload the page
